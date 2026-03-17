@@ -269,14 +269,14 @@
 
     <!-- Left Sidebar -->
     <aside class="left-sidebar">
-      <a class="left-nav-item" href="/drrm_report_static.html">
+      <a class="left-nav-item" href="/index.html">
         <div class="grid-icon">
           <span></span><span></span>
           <span></span><span></span>
         </div>
         DashBoard
       </a>
-      <a class="left-nav-item active" href="#">
+      <a class="left-nav-item active" href="#" onclick="openChoiceModal(); return false;">
         <div class="grid-icon">
           <span></span><span></span>
           <span></span><span></span>
@@ -372,6 +372,13 @@
   </div>
 
   <script>
+    function openChoiceModal() {
+      const overlay = document.getElementById('choice-overlay');
+      const main    = document.getElementById('main-content');
+      overlay.style.display = 'flex';
+      main.classList.add('blurred');
+    }
+
     function launchAnalysis(type) {
       const overlay = document.getElementById('choice-overlay');
       const main    = document.getElementById('main-content');
